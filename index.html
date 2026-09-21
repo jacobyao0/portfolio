@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>姚杰元的个人作品集</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 侧边栏 ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <header class="profile">
+        <div class="avatar" aria-hidden="true">姚</div>
+        <h1 class="name">姚杰元</h1>
+        <p class="tagline">数据科学与大数据技术 · 关注 AI 与深度学习</p>
+      </header>
+
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-text">菜单</span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#home" class="nav-link is-active">首页</a></li>
+          <li><a href="#projects" class="nav-link">项目作品</a></li>
+          <li><a href="#about" class="nav-link">关于我</a></li>
+          <li><a href="#contact" class="nav-link">联系方式</a></li>
+        </ul>
+      </nav>
+
+      <section class="skills" aria-label="技能方向">
+        <h2 class="sidebar-title">技能方向</h2>
+        <ul class="skill-list">
+          <li><span class="skill-name">Python</span></li>
+          <li><span class="skill-name">HTML / CSS</span></li>
+          <li><span class="skill-name">MySQL</span></li>
+          <li><span class="skill-name">数据分析与可视化（Anaconda / Jupyter）</span></li>
+        </ul>
+      </section>
+
+      <footer class="sidebar-footer">
+        <a href="mailto:yuanjieyao@163.com" class="footer-link">yuanjieyao@163.com</a>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- ===== 主内容区 ===== -->
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <p class="hero-kicker">你好，我是姚杰元</p>
+      <h2 class="hero-title">把想法<br>做成<span class="accent">看得见</span>的东西</h2>
+      <p class="hero-desc">一名数据科学与大数据技术专业的学生，目前主要关注人工智能与深度学习方向，希望把数据分析的能力和 AI 工具结合起来解决实际问题。下面是我做过的一些项目。</p>
+      <a href="#projects" class="hero-cta">查看项目 ↓</a>
+    </section>
+
+    <!-- 项目作品 -->
+    <section class="projects" id="projects">
+      <header class="section-head">
+        <h2 class="section-title">项目作品</h2>
+        <div class="filters" id="filters" role="group" aria-label="项目分类筛选">
+          <button class="filter-btn is-active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="web">Web 应用</button>
+          <button class="filter-btn" data-filter="ai">AI 应用</button>
+          <button class="filter-btn" data-filter="data">数据可视化</button>
+        </div>
+      </header>
+
+      <div class="project-list" id="project-list">
+
+        <article class="project" data-category="data">
+          <div class="project-media media-grad-2">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="电影评分数据图表示意图">
+              <!-- 白色报表卡片 -->
+              <rect x="46" y="34" width="388" height="232" rx="12" fill="#ffffff" opacity="0.94"/>
+              <!-- 卡片标题行 -->
+              <rect x="70" y="58" width="120" height="12" rx="6" fill="#3c6bff" opacity="0.85"/>
+              <rect x="352" y="56" width="58" height="16" rx="8" fill="#e8eeff"/>
+              <!-- 柱状图 -->
+              <rect x="76"  y="170" width="26" height="60"  rx="4" fill="#3c6bff" opacity="0.85"/>
+              <rect x="112" y="146" width="26" height="84"  rx="4" fill="#3c6bff" opacity="0.7"/>
+              <rect x="148" y="186" width="26" height="44"  rx="4" fill="#3c6bff" opacity="0.85"/>
+              <rect x="184" y="128" width="26" height="102" rx="4" fill="#3c6bff" opacity="0.7"/>
+              <rect x="220" y="158" width="26" height="72"  rx="4" fill="#3c6bff" opacity="0.85"/>
+              <!-- 折线图（年代趋势） -->
+              <polyline points="290,200 322,176 354,188 386,150 414,132"
+                        fill="none" stroke="#ff5a3c" stroke-width="4"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="290" cy="200" r="5" fill="#ff5a3c"/>
+              <circle cx="322" cy="176" r="5" fill="#ff5a3c"/>
+              <circle cx="354" cy="188" r="5" fill="#ff5a3c"/>
+              <circle cx="386" cy="150" r="5" fill="#ff5a3c"/>
+              <circle cx="414" cy="132" r="5" fill="#ff5a3c"/>
+              <!-- 坐标轴线 -->
+              <line x1="70" y1="230" x2="428" y2="230" stroke="#d7d7e0" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index">01</span>
+            <span class="project-category">数据可视化</span>
+            <h3 class="project-name">豆瓣电影评分数据可视化分析</h3>
+            <p class="project-desc">一个电影评分数据分析练习项目。使用 Python 抓取并整理豆瓣电影评分数据，用 Pandas 完成数据清洗和统计，再用 Matplotlib 和 PyECharts 绘制评分分布、年代趋势和类型占比等图表，最后生成一个可以交互查看的网页报表。</p>
+            <ul class="project-stack">
+              <li>Python</li><li>Pandas</li><li>Matplotlib</li><li>PyECharts</li>
+            </ul>
+            <p class="project-meta">完成时间：2026 年 5 月</p>
+          </div>
+        </article>
+
+        <article class="project" data-category="ai">
+          <div class="project-media media-grad-1">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="手写数字与神经网络示意图">
+              <!-- 像素网格背景（模拟 MNIST 28x28 风格） -->
+              <g fill="#ffffff" opacity="0.22">
+                <rect x="52"  y="46" width="20" height="20" rx="3"/><rect x="80" y="46" width="20" height="20" rx="3"/><rect x="108" y="46" width="20" height="20" rx="3"/><rect x="136" y="46" width="20" height="20" rx="3"/><rect x="164" y="46" width="20" height="20" rx="3"/><rect x="192" y="46" width="20" height="20" rx="3"/>
+                <rect x="52"  y="74" width="20" height="20" rx="3"/><rect x="80" y="74" width="20" height="20" rx="3"/><rect x="108" y="74" width="20" height="20" rx="3"/><rect x="136" y="74" width="20" height="20" rx="3"/><rect x="164" y="74" width="20" height="20" rx="3"/><rect x="192" y="74" width="20" height="20" rx="3"/>
+                <rect x="52"  y="102" width="20" height="20" rx="3"/><rect x="80" y="102" width="20" height="20" rx="3"/><rect x="108" y="102" width="20" height="20" rx="3"/><rect x="136" y="102" width="20" height="20" rx="3"/><rect x="164" y="102" width="20" height="20" rx="3"/><rect x="192" y="102" width="20" height="20" rx="3"/>
+                <rect x="52"  y="130" width="20" height="20" rx="3"/><rect x="80" y="130" width="20" height="20" rx="3"/><rect x="108" y="130" width="20" height="20" rx="3"/><rect x="136" y="130" width="20" height="20" rx="3"/><rect x="164" y="130" width="20" height="20" rx="3"/><rect x="192" y="130" width="20" height="20" rx="3"/>
+                <rect x="52"  y="158" width="20" height="20" rx="3"/><rect x="80" y="158" width="20" height="20" rx="3"/><rect x="108" y="158" width="20" height="20" rx="3"/><rect x="136" y="158" width="20" height="20" rx="3"/><rect x="164" y="158" width="20" height="20" rx="3"/><rect x="192" y="158" width="20" height="20" rx="3"/>
+                <rect x="52"  y="186" width="20" height="20" rx="3"/><rect x="80" y="186" width="20" height="20" rx="3"/><rect x="108" y="186" width="20" height="20" rx="3"/><rect x="136" y="186" width="20" height="20" rx="3"/><rect x="164" y="186" width="20" height="20" rx="3"/><rect x="192" y="186" width="20" height="20" rx="3"/>
+                <rect x="52"  y="214" width="20" height="20" rx="3"/><rect x="80" y="214" width="20" height="20" rx="3"/><rect x="108" y="214" width="20" height="20" rx="3"/><rect x="136" y="214" width="20" height="20" rx="3"/><rect x="164" y="214" width="20" height="20" rx="3"/><rect x="192" y="214" width="20" height="20" rx="3"/>
+              </g>
+              <!-- 手写字母 7（笔画风格） -->
+              <path d="M74 84 Q150 66 214 82 Q186 140 150 212"
+                    fill="none" stroke="#ffffff" stroke-width="17"
+                    stroke-linecap="round"/>
+              <!-- 神经网络节点与连线 -->
+              <g stroke="#ffffff" stroke-width="2" opacity="0.55">
+                <line x1="292" y1="90"  x2="356" y2="70"/>
+                <line x1="292" y1="90"  x2="356" y2="150"/>
+                <line x1="292" y1="90"  x2="356" y2="230"/>
+                <line x1="292" y1="160" x2="356" y2="70"/>
+                <line x1="292" y1="160" x2="356" y2="150"/>
+                <line x1="292" y1="160" x2="356" y2="230"/>
+                <line x1="292" y1="230" x2="356" y2="70"/>
+                <line x1="292" y1="230" x2="356" y2="150"/>
+                <line x1="292" y1="230" x2="356" y2="230"/>
+                <line x1="372" y1="70"  x2="424" y2="120"/>
+                <line x1="372" y1="150" x2="424" y2="150"/>
+                <line x1="372" y1="230" x2="424" y2="180"/>
+              </g>
+              <g fill="#ffffff">
+                <circle cx="286" cy="90"  r="9"/><circle cx="286" cy="160" r="9"/><circle cx="286" cy="230" r="9"/>
+                <circle cx="364" cy="70"  r="9"/><circle cx="364" cy="150" r="9"/><circle cx="364" cy="230" r="9"/>
+                <circle cx="430" cy="120" r="10"/><circle cx="430" cy="150" r="10"/><circle cx="430" cy="180" r="10"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index">02</span>
+            <span class="project-category">AI 应用</span>
+            <h3 class="project-name">MNIST 手写数字识别入门</h3>
+            <p class="project-desc">深度学习的入门练手项目。基于 PyTorch 搭建了一个简单的前馈神经网络，在 MNIST 手写数字数据集上完成训练和测试，最终识别准确率达到 97% 以上。过程中完整体验了数据加载、模型训练、效果评估的基本流程。</p>
+            <ul class="project-stack">
+              <li>Python</li><li>PyTorch</li><li>Jupyter Notebook</li>
+            </ul>
+            <p class="project-meta">完成时间：2026 年 6 月</p>
+          </div>
+        </article>
+
+        <article class="project" data-category="web">
+          <div class="project-media media-grad-3">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="学习笔记网页界面示意图">
+              <!-- 浏览器窗口 -->
+              <rect x="52" y="40" width="376" height="220" rx="12" fill="#ffffff" opacity="0.94"/>
+              <!-- 窗口标题栏 -->
+              <path d="M52 52 a12 12 0 0 1 12 -12 h352 a12 12 0 0 1 12 12 v18 h-376 z" fill="#eef4f1"/>
+              <circle cx="74" cy="52" r="4.5" fill="#ff5a3c"/>
+              <circle cx="92" cy="52" r="4.5" fill="#f5b800"/>
+              <circle cx="110" cy="52" r="4.5" fill="#18a878"/>
+              <!-- 侧栏 -->
+              <rect x="68" y="78" width="84" height="164" rx="8" fill="#e4f3ec"/>
+              <rect x="80" y="92"  width="60" height="8" rx="4" fill="#18a878"/>
+              <rect x="80" y="112" width="48" height="7" rx="3.5" fill="#a9cbbb"/>
+              <rect x="80" y="130" width="52" height="7" rx="3.5" fill="#a9cbbb"/>
+              <rect x="80" y="148" width="44" height="7" rx="3.5" fill="#a9cbbb"/>
+              <rect x="80" y="166" width="50" height="7" rx="3.5" fill="#a9cbbb"/>
+              <!-- 笔记条目 1 -->
+              <rect x="168" y="82" width="240" height="42" rx="8" fill="#f4f7f6"/>
+              <rect x="180" y="94" width="110" height="9" rx="4.5" fill="#2b3a34"/>
+              <rect x="180" y="110" width="160" height="6" rx="3" fill="#b9c6c0"/>
+              <!-- 笔记条目 2 -->
+              <rect x="168" y="134" width="240" height="42" rx="8" fill="#f4f7f6"/>
+              <rect x="180" y="146" width="90" height="9" rx="4.5" fill="#2b3a34"/>
+              <rect x="180" y="162" width="180" height="6" rx="3" fill="#b9c6c0"/>
+              <!-- 笔记条目 3 -->
+              <rect x="168" y="186" width="240" height="42" rx="8" fill="#f4f7f6"/>
+              <rect x="180" y="198" width="120" height="9" rx="4.5" fill="#2b3a34"/>
+              <rect x="180" y="214" width="140" height="6" rx="3" fill="#b9c6c0"/>
+              <!-- 分类标签 -->
+              <rect x="168" y="240" width="52" height="18" rx="9" fill="#18a878" opacity="0.18"/>
+              <rect x="228" y="240" width="52" height="18" rx="9" fill="#ff5a3c" opacity="0.15"/>
+              <rect x="288" y="240" width="52" height="18" rx="9" fill="#3c6bff" opacity="0.14"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index">03</span>
+            <span class="project-category">Web 应用</span>
+            <h3 class="project-name">个人学习笔记网站</h3>
+            <p class="project-desc">一个纯前端静态网站，用来整理和展示自己的课程笔记与学习总结。页面使用原生 HTML/CSS 实现响应式布局，并用 JavaScript 实现了笔记分类筛选和暗色模式切换，部署后作为自己的学习主页使用。</p>
+            <ul class="project-stack">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <p class="project-meta">完成时间：2026 年 8 月</p>
+          </div>
+        </article>
+
+        <!-- 新增项目：复制上方任意一个 <article> 块，修改编号、类别与内容即可 -->
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+      <header class="section-head">
+        <h2 class="section-title">关于我</h2>
+      </header>
+      <div class="about-grid">
+        <p class="about-text">我是姚杰元，广州软件学院数据科学与大数据技术专业的在读学生，目前主要关注人工智能与深度学习方向，希望把数据分析的能力和 AI 工具结合起来解决实际问题。</p>
+        <p class="about-text">从豆瓣电影评分的数据可视化，到 PyTorch 手写数字识别，再到纯前端的学习笔记网站，我在这些项目练习中一步步把课堂上学到的数据分析方法用起来，也在尝试向 AI 方向深入。</p>
+        <ul class="about-stats">
+          <li><strong>3</strong><span>项目实践</span></li>
+          <li><strong>97%+</strong><span>MNIST 识别准确率</span></li>
+          <li><strong>4</strong><span>技能方向</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact" id="contact">
+      <header class="section-head">
+        <h2 class="section-title">联系方式</h2>
+      </header>
+      <p class="contact-lead">无论是课程交流、项目合作还是实习机会，都欢迎联系我。</p>
+      <ul class="contact-list">
+        <li><span class="contact-label">邮箱</span><a href="mailto:yuanjieyao@163.com" class="contact-link">yuanjieyao@163.com</a></li>
+        <li><span class="contact-label">所在地</span><span class="contact-static">中国 · 江门</span></li>
+      </ul>
+      <footer class="page-footer">© 2026 姚杰元 · 用 HTML / CSS / JavaScript 手工打造</footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
