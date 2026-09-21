@@ -8,9 +8,25 @@
   --line: #e7e7ec;
   --bg: #fbfbfd;
   --sidebar-bg: #ffffff;
+  --card: #ffffff;
   --radius: 14px;
   --sidebar-w: 320px;
 }
+
+/* 深色主题 */
+html[data-theme="dark"] {
+  --accent: #ff6f52;
+  --accent-soft: rgba(255, 90, 60, .16);
+  --ink: #e9e9ef;
+  --ink-2: #b6b6c0;
+  --ink-3: #888893;
+  --line: #2e2e37;
+  --bg: #141419;
+  --sidebar-bg: #1b1b22;
+  --card: #23232b;
+}
+
+html[data-theme="dark"] .project-media { box-shadow: 0 12px 32px rgba(0, 0, 0, .35); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -96,7 +112,32 @@ body {
 /* 导航 */
 .nav { margin-bottom: 40px; }
 
+.nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .nav-toggle { display: none; }
+
+/* 主题切换按钮 */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 .nav-list li { margin-bottom: 4px; }
 
@@ -137,7 +178,7 @@ body {
   display: inline-block;
   font-size: 13px;
   color: var(--ink-2);
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 4px 12px;
@@ -238,7 +279,7 @@ section { padding: 72px 0; }
 
 .filter-btn {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--card);
   color: var(--ink-2);
   font-size: 13px;
   padding: 6px 16px;
@@ -341,7 +382,7 @@ section { padding: 72px 0; }
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 3px 10px;
-  background: #fff;
+  background: var(--card);
 }
 
 .project-meta {

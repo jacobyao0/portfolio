@@ -1,3 +1,32 @@
+// ========== 深浅色主题切换 ==========
+(function initThemeToggle() {
+  const STORAGE_KEY = "portfolio-theme";
+  const root = document.documentElement;
+  const btn = document.getElementById("theme-toggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      btn.textContent = "☀️";
+      btn.setAttribute("aria-label", "切换为浅色主题");
+    } else {
+      root.removeAttribute("data-theme");
+      btn.textContent = "🌙";
+      btn.setAttribute("aria-label", "切换为深色主题");
+    }
+  }
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(saved || (prefersDark ? "dark" : "light"));
+
+  btn.addEventListener("click", function () {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem(STORAGE_KEY, next);
+  });
+})();
+
 // ========== 移动端导航菜单开合 ==========
 (function initNavToggle() {
   const toggle = document.getElementById("nav-toggle");
